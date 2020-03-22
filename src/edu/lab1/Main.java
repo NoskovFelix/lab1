@@ -8,8 +8,14 @@ public class Main {
         HashSet<String> str = new HashSet<String>();
         str.add("легкий");
         str.add("тяжелый");
-        Bag bag = new Bag("bag",10,str);
-        bag.getInfo();
+
+        SimpleItem item = new SimpleItem("Кирпич",10.2f,str);
+
+        Bag bag = new Bag("Bag",30);
+        bag.push(item);
+        bag.getBag();
+
+
 
 
 

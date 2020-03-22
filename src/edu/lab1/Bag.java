@@ -1,20 +1,34 @@
 package edu.lab1;
 import java.util.*;
 
-public class Bag extends Item{
+public class Bag implements OperationsWithCollections{
+    private String name;
     private float weight = 10;
+    private HashSet<Object> bag = new HashSet<Object>();
 
-    public Bag(String name,float weight,HashSet<String> prop){
-        super(name,prop);
+    public Bag(String name,float weight){
+        this.name = name;
         this.weight = weight;
     }
 
-    @Override
-    public void getInfo(){
-        super.getInfo();
-        System.out.println("Вес: " + weight);
+
+    public void push(Object obj){
+        bag.add(obj);
     }
 
+    public void pull(Object obj){
+
+    }
+    public void getItemForName(String name){
+
+    }
+    @Override
+    public String toString(){
+
+    }
+    public void getBag(){
+        System.out.println(bag);
+    }
 
 
 

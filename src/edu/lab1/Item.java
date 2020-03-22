@@ -13,7 +13,5 @@ public abstract class Item {
        // this.weight = weight;
         this.prop = prop;
     }
-    public void getInfo(){
-        System.out.println("Объект: " + name + "\n" + "Свойства: " + prop);
-    }
+    public abstract void getInfo();
 }
