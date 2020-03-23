@@ -3,15 +3,24 @@ package edu.lab1;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Item {
+public class Item {
     private String name;
-   // private float weight;
-    private final Set<String> prop;
-
-    public Item(String name,HashSet<String> prop){
+    private Set<String> prop;
+    private int weight;
+    public Item(String name, int weight,HashSet<String> prop){
         this.name = name;
-       // this.weight = weight;
+        this.weight = weight;
         this.prop = prop;
     }
-    public abstract void getInfo();
+
+    public int getWeight(){
+        return weight;
+    }
+    public String getName(){
+        return name;
+    }
+    public void getInfo(){
+
+        System.out.println("Name = " + name + "\n" + "weight = " + weight + "\n" + "Properties = " + prop);
+    }
 }
