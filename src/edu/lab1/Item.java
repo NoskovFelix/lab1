@@ -7,12 +7,18 @@ public class Item {
     private String name;
     private Set<String> prop;
     private int weight;
+    private boolean ItemAlreadyPlaced = false;
     public Item(String name, int weight,HashSet<String> prop){
         this.name = name;
         this.weight = weight;
         this.prop = prop;
     }
-
+    public Set<String> getProp(){
+        return prop;
+    }
+    public boolean setItemsStatus(){
+        return ItemAlreadyPlaced = true;
+    }
     public int getWeight(){
         return weight;
     }
